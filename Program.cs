@@ -63,6 +63,9 @@ namespace uc2
 
             Console.Write("the daily wage is ");
             Console.WriteLine(wpd);
+            int wpm = wpd * 20;
+            Console.Write("the monthly wage is ");
+            Console.WriteLine(wpm);
             Console.ReadLine();
         }
     }
