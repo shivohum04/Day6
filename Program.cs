@@ -23,27 +23,32 @@ namespace uc2
         {
             int workhours = 0;
 
-            if (a == 1)
+            switch (a)
             {
-                workhours = 4;
-                Console.Write("part time employee and the wage is ");
+                case 1:
+                    {
+                        workhours = 4;
+                        Console.Write("part time employee so the wage is ");
+                        break;
+                    }
+                case 2:
+                    {
+                        workhours = 8;
+                        Console.Write("full time employee so the wage is ");
+                        break;
+                    }
+                case 0:
+                    {
+                        workhours = 0;
+                        Console.Write("not working so the wage is ");
+                        break;
+                    }
             }
-            else if (a == 2)
-            {
-                workhours = 8;
-                Console.Write("full time employee and the wage is ");
-            }
-            else
-            {
-                workhours = 0;
-                Console.Write(" not working so the wage is ");
-            }
-
             int wage = workhours * 20;
-            
             Console.WriteLine(wage);
 
         }
+
 
         static void Main(string[] args)
         {
