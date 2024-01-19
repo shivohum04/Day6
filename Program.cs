@@ -17,23 +17,48 @@ namespace uc2
             else
             {
                 Console.WriteLine("employee absent");
-                Console.ReadLine();
             }
         }
+        static void checkemployee(int a)
+        {
+            int workhours = 0;
+
+            if (a == 1)
+            {
+                workhours = 4;
+                Console.Write("part time employee and the wage is ");
+            }
+            else if (a == 2)
+            {
+                workhours = 8;
+                Console.Write("full time employee and the wage is ");
+            }
+            else
+            {
+                workhours = 0;
+                Console.Write(" not working so the wage is ");
+            }
+
+            int wage = workhours * 20;
+            
+            Console.WriteLine(wage);
+
+        }
+
         static void Main(string[] args)
         {
             Random random = new Random();
             int value = random.Next(0, 2);
             checkAttendance(value);
-        }
+            checkemployee(value);
 
             int wph = 20; // work per hour 
-            int hpd = 8;// hours in a day 
-            int wpd = wph * hpd;// daily wage
+            int hpd = 8; // hours in a day 
+            int wpd = wph * hpd; // daily wage
+
             Console.Write("the daily wage is ");
             Console.WriteLine(wpd);
             Console.ReadLine();
         }
-
     }
 }
